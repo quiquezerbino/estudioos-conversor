@@ -8,7 +8,8 @@ FROM node:22-slim
 # Dependencias de runtime de LibreOffice headless + herramientas de descarga.
 RUN apt-get update && apt-get install -y --no-install-recommends \
       wget ca-certificates \
-      libx11-6 libxext6 libxrender1 libxtst6 libxi6 libxinerama1 \
+      libx11-6 libx11-xcb1 libxcb1 libxext6 libxrender1 libxtst6 libxi6 libxinerama1 \
+      libsm6 libice6 libxrandr2 \
       libfreetype6 libcups2 libglib2.0-0 libcairo2 libdbus-1-3 libnss3 \
       libxml2 libxslt1.1 \
       fonts-liberation fonts-crosextra-carlito fonts-crosextra-caladea \
